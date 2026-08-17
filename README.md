@@ -1,5 +1,9 @@
 # multi-review
 
+> **Archived:** This standalone repository has been integrated into
+> [`llm-skillbook`](https://github.com/mark-dingwall/llm-skillbook/tree/main/multi-review).
+> Please use and contribute to the [`multi-review/` directory there](https://github.com/mark-dingwall/llm-skillbook/tree/main/multi-review).
+
 Fan out a code review across multiple AI models in parallel, aggregate results into a `REVIEW.md`, and optionally run a consensus-synthesis pass. It supports an interactive Claude Code skill and a contained headless CLI.
 
 **Two supported entry points.** Use `/multi-review` inside Claude Code for the interactive workflow, or `multi_review.py --prompt-file … --out-dir …` for a contained headless single pass. The skill runs `claude` as a Task subagent; the headless driver runs it through `claude -p`. The proposed `claude -p` billing change that originally motivated this split is deferred indefinitely, so choose the entry point that fits the caller rather than a presumed billing distinction.
